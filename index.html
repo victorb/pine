@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pine</title>
+  <style>
+		html, body {
+			font-family: sans-serif;
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+		}
+
+		.wrapper {
+			position: absolute;
+			top: 0px; right: 0px; bottom: 0px; left: 0px;
+		}
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+		.page {
+			position: absolute;
+			display: block;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+		}
+
+		.page-submission, .page-record, .page-publish {
+			display: none;
+		}
+
+		.page-main .button {
+			position: absolute;
+			text-align: center;
+			line-height: 50px;
+			display: block;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			height: 50px;
+			background-color: red;
+			color: white;
+			font-size: 26px;
+			text-decoration: none;
+		}
+
+		.page-record .button, .page-publish .button {
+			position: absolute;
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			background-color: black;
+			padding: 10px;
+			color: white;
+			text-decoration: none;
+		}
+
+		.page .back {
+			left: 10px;
+			top: 10px;
+		}
+
+		.page-record .publish {
+			top: unset;
+			bottom: 50px;
+			left: 50vw;
+			margin-left: -35px;
+			width: 70px;
+			text-align: center;
+		}
+
+		.page-publish .publish {
+			top: 10px;
+			right: 10px;
+			width: 70px;
+			text-align: center;
+		}
+
+		.record-progress {
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			height: 10px;
+			width: 0%;
+			display: block;
+			background-color: darkseagreen;
+		}
+
+		.title {
+			position: absolute;
+			top: 0px;
+			left: 0px; right: 0px;
+			text-align: center;
+			font-size: 48px;
+			font-weight: bolder;
+			letter-spacing: 5px;
+		}
+  </style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="page page-main">
+			<div class="title">Pine</div>
+			<a class="button" href="#">Record new Pine</a>
+		</div>
+		<div class="page page-submission">
+			Submission
+		</div>
+		<div class="page page-record">
+			<video id="video" autoplay></video>
+			<div class="record-progress"></div>
+			<a class="button back" href="#">Back</a>
+			<a class="button publish" href="#">Publish</a>
+		</div>
+		<div class="page page-publish">
+			<video id="recorded" controls autoplay loop></video>
+			<a class="button back" href="#">Back</a>
+			<a class="button publish" href="#">Publish</a>
+		</div>
+	</div>
+  <script src="ipfs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
