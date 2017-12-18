@@ -1,6 +1,8 @@
 # pine
 > vine clone over IPFS
 
+![Demo of Pine](pine-demo.gif)
+
 ## How to run
 
 Requires nodejs version 9.0.0 or higher and yarn
