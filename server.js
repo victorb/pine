@@ -10,6 +10,7 @@ let videosAtomHead = null // will be replaced once the first video is added
 // created_at: string of ISO date
 
 const node = new ipfs({
+  repo: './.ipfs-repo',
   EXPERIMENTAL: {
     pubsub: true
   }

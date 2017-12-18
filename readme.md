@@ -1,3 +1,38 @@
+# pine
+> vine clone over IPFS
+
+## How to run
+
+Requires nodejs version 9.0.0 or higher and yarn
+
+- Clone the repository
+- Run `yarn` to install the dependencies (or `npm install` if you use npm)
+- Run the `dev` command to serve frontend via either yarn or npm
+  - `yarn dev` OR `npm run dev`
+- Run the caching server via either yarn or npm
+  - `yarn start` OR `npm start`
+
+Now you should be able to see the application on localhost:8080
+
+Navigating to the website, you should see the start page, showing
+a "Record new Pine" in the bottom, and a permission dialog asking
+for permission to access your camera. Accept that. Also, open up the
+browser's javascript console, so you can see any potential errors (
+currently doesn't handle errors very good)
+
+Then click on "Record new Pine" to go to the recording screen.
+
+Once on the recording screen, click and hold down on the camera
+output to begin recording. You should see a progress-bar in the
+bottom. Make sure to release the mouse before it fills up, as each
+recording can only be ~6 seconds long.
+
+Once you let go, press the "Publish" button and you should be able
+to see a preview of your recording. If you're happy with it, click
+"Publish" in the top-right, and your recording will be published
+on IPFS. You can see the link being printed in your browser's
+console.
+
 ## open problems
 
 - How to keep track of "loops"
